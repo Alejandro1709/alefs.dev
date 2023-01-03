@@ -12,5 +12,11 @@
   },
   "dependencies": {
     "astro": "^1.8.0"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   }
 }
