@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "alefsdev",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -12,11 +12,5 @@
   },
   "dependencies": {
     "astro": "^1.8.0"
-  },
-  "devDependencies": {
-    "standard": "^17.0.0"
-  },
-  "eslintConfig": {
-    "extends": "standard"
   }
 }
