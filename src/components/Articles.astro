@@ -1,15 +1,15 @@
 ---
+import type { ArticleType } from '../types/article';
 import Article from './Article.astro';
 
 export interface ArticlesProps {
   heading: string;
   max: number;
   href: string;
+  articles: ArticleType[];
 }
 
-const { heading = 'Section', max = 6, href = '/' } = Astro.props;
-
-const articles = Array.from({ length: max }, (_, i) => i);
+const { heading = 'Section', max = 6, href = '/', articles } = Astro.props;
 ---
 
 <section class='pt-8 md:pt-6 mx-4 md:mx-0'>
@@ -21,6 +21,6 @@ const articles = Array.from({ length: max }, (_, i) => i);
     >
   </div>
   <div class='grid grid-cols-2 md:grid-cols-4 gap-2'>
-    {articles.map((article) => <Article />)}
+    {articles.map((article: ArticleType) => <Article article={article} />)}
   </div>
 </section>

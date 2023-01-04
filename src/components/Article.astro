@@ -1,5 +1,15 @@
+---
+import type { ArticleType } from '../types/article';
+
+export interface ArticlePageProps {
+  article: ArticleType;
+}
+
+const { article } = Astro.props;
+---
+
 <article
   class='h-[200px] bg-slate-400 hover:scale-95 transition-all cursor-pointer hover:shadow-md'
 >
-  Video
+  {article.type}
 </article>
