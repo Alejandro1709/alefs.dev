@@ -1,9 +1,11 @@
 ---
+import Articles from '../components/Articles.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='alefs.dev | Home'>
-  <main class='bg-red-300'>
-    <section class='pt-8 md:pt-10 mx-4 md:mx-0'>Holaaa</section>
+  <main class=''>
+    <Articles heading='Últimos Videos' max={8} href='/videos' />
+    <Articles heading='Últimos Proyectos' max={4} href='/proyectos' />
   </main>
 </Layout>
