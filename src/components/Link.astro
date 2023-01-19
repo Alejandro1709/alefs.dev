@@ -1,0 +1,31 @@
+---
+export type LinkProps = {
+  href: string;
+  title: string;
+  target?: string;
+};
+
+const { href, title = 'New Link', target = '_blank' } = Astro.props;
+---
+
+<li>
+  <a href={href} target={target}>{title}</a>
+</li>
+
+<style>
+  li {
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+  }
+
+  li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  li:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+  }
+</style>

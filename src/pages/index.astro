@@ -1,23 +1,17 @@
 ---
+import Link from '../components/Link.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title='alefs.dev | Home'>
-  <main class='main'>
-    <h1 class='heading'>alefsdev</h1>
-    <ul class='links'>
-      <li>
-        <a href='https://www.twitch.tv/alefsdev' target='_blank'>Twitch</a>
-      </li>
-      <li>
-        <a href='https://www.instagram.com/alefsdev' target='_blank'
-          >Instagram</a
-        >
-      </li>
-      <li>
-        <a href='https://www.github.com/alejandro1709' target='_blank'>Github</a
-        >
-      </li>
+<Layout title="alefs.dev | Home">
+  <main class="main">
+    <h1 class="heading">alefsdev</h1>
+    <ul class="links">
+      <Link title="Twitch" href="https://www.twitch.tv/alefsdev" />
+      <Link title="Instagram" href="https://www.instagram.com/alefsdev" />
+      <Link title="Github" href="https://www.github.com/alejandro1709" />
+      <Link title="Youtube" href="https://www.youtube.com/@alefsdev" />
+      <Link title="Contacto" href="mailto:contacto@alefs.dev" target="_self" />
     </ul>
   </main>
 </Layout>
@@ -27,8 +21,10 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
   }
   .heading {
+    text-align: center;
     font-size: 5rem;
     font-weight: 700;
   }
@@ -36,24 +32,10 @@ import Layout from '../layouts/Layout.astro';
   .links {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
-    margin: 0;
-  }
-
-  .links li {
-    font-size: 1rem;
-    font-weight: 700;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .links li a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .links li:hover {
-    transform: scale(1.1);
-    text-decoration: underline;
+    margin: 0 auto;
+    width: 26.25rem;
   }
 </style>
