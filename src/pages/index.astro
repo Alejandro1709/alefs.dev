@@ -1,4 +1,5 @@
 ---
+import Link from '../components/Link.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -6,21 +7,11 @@ import Layout from '../layouts/Layout.astro';
   <main class="main">
     <h1 class="heading">alefsdev</h1>
     <ul class="links">
-      <li>
-        <a href="https://www.twitch.tv/alefsdev" target="_blank">Twitch</a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/alefsdev" target="_blank">Instagram</a>
-      </li>
-      <li>
-        <a href="https://www.github.com/alejandro1709" target="_blank">Github</a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/@alefsdev" target="_blank">Youtube</a>
-      </li>
-      <li>
-        <a href="mailto:contacto@alefs.dev" target="_blank">Contacto</a>
-      </li>
+      <Link title="Twitch" href="https://www.twitch.tv/alefsdev" />
+      <Link title="Instagram" href="https://www.instagram.com/alefsdev" />
+      <Link title="Github" href="https://www.github.com/alejandro1709" />
+      <Link title="Youtube" href="https://www.youtube.com/@alefsdev" />
+      <Link title="Contacto" href="mailto:contacto@alefs.dev" target="_self" />
     </ul>
   </main>
 </Layout>
@@ -46,21 +37,5 @@ import Layout from '../layouts/Layout.astro';
     padding: 0;
     margin: 0 auto;
     width: 26.25rem;
-  }
-
-  .links li {
-    font-size: 1rem;
-    font-weight: 700;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .links li a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .links li:hover {
-    transform: scale(1.1);
-    text-decoration: underline;
   }
 </style>
