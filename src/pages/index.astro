@@ -24,9 +24,17 @@ import Layout from '../layouts/Layout.astro';
     width: 100%;
   }
   .heading {
+    display: inline-block;
     text-align: center;
     font-size: 5rem;
     font-weight: 700;
+    user-select: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .heading:hover {
+    transform: scale(1.1) rotate(5deg) perspective(1px);
   }
 
   .links {
