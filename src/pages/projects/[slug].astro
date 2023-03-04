@@ -1,0 +1,18 @@
+---
+import projects from '../../data/projects';
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [{ params: { slug: 'next-trivia' } }];
+}
+
+const { slug } = Astro.params;
+
+const project = projects.find((project) => project.slug === slug);
+
+if (!project) return Astro.redirect('/404');
+---
+
+<Layout title={`alefsdev | ${project.title}`} description={project.description}>
+  <h1>Helloooo {slug}</h1>
+</Layout>
