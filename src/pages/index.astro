@@ -1,73 +1,112 @@
 ---
-import Link from '../components/Link.astro';
+import Articles from '../components/Articles.astro';
 import Layout from '../layouts/Layout.astro';
+import type { IProjectArticle, IVideoArticle } from '../types/article';
+
+const projects: IProjectArticle[] = [
+  {
+    id: 1,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    href: '#',
+    image: 'https://picsum.photos/seed/1/300/200',
+    type: 'project',
+  },
+  {
+    id: 2,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    href: '#',
+    image: 'https://picsum.photos/seed/2/300/200',
+    type: 'project',
+  },
+  {
+    id: 3,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    href: '#',
+    image: 'https://picsum.photos/seed/3/300/200',
+    type: 'project',
+  },
+  {
+    id: 4,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    href: '#',
+    image: 'https://picsum.photos/seed/4/300/200',
+    type: 'project',
+  },
+];
+
+const videos: IVideoArticle[] = [
+  {
+    id: 1,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    href: '#',
+    image: 'https://picsum.photos/seed/1/300/200',
+    type: 'video',
+  },
+  {
+    id: 2,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    href: '#',
+    image: 'https://picsum.photos/seed/2/300/200',
+    type: 'video',
+  },
+  {
+    id: 3,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    href: '#',
+    image: 'https://picsum.photos/seed/3/300/200',
+    type: 'video',
+  },
+  {
+    id: 4,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    href: '#',
+    image: 'https://picsum.photos/seed/4/300/200',
+    type: 'video',
+  },
+  {
+    id: 5,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    href: '#',
+    image: 'https://picsum.photos/seed/5/300/200',
+    type: 'video',
+  },
+  {
+    id: 6,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    href: '#',
+    image: 'https://picsum.photos/seed/6/300/200',
+    type: 'video',
+  },
+  {
+    id: 7,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    href: '#',
+    image: 'https://picsum.photos/seed/6/300/200',
+    type: 'video',
+  },
+  {
+    id: 8,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    href: '#',
+    image: 'https://picsum.photos/seed/6/300/200',
+    type: 'video',
+  },
+];
 ---
 
-<Layout title="alefs.dev | Home">
-  <main class="main">
-    <h1 class="heading">alefsdev</h1>
-    <ul class="links">
-      <Link title="Twitch" href="https://www.twitch.tv/alefsdev" />
-      <Link title="Instagram" href="https://www.instagram.com/alefsdev" />
-      <Link title="Github" href="https://www.github.com/alefsdev" />
-      <Link title="Youtube" href="https://www.youtube.com/@alefsdev" />
-      <Link title="Contacto" href="mailto:contacto@alefs.dev" target="_self" />
-    </ul>
+<Layout title='alefs.dev | Home'>
+  <main class=''>
+    <Articles
+      heading='Últimos Videos'
+      max={8}
+      href='/videos'
+      articles={videos}
+    />
+    <Articles
+      heading='Últimos Proyectos'
+      max={4}
+      href='/proyectos'
+      articles={projects}
+    />
   </main>
 </Layout>
-
-<style>
-  .main {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-  }
-  .heading {
-    display: inline;
-    width: fit-content;
-    text-align: center;
-    font-size: 5rem;
-    font-weight: 700;
-    user-select: none;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .heading:hover {
-    transform: scale(1.1) rotate(5deg) perspective(1px);
-  }
-
-  .links {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0 auto;
-    width: 15%;
-  }
-
-  /* media queries for medium devices */
-  @media (max-width: 1024px) {
-    .heading {
-      font-size: 4rem;
-    }
-    .links {
-      width: 40%;
-    }
-  }
-
-  /* media queries for smaller devices */
-  @media (max-width: 768px) {
-    .heading {
-      font-size: 3rem;
-    }
-    .links {
-      width: 80%;
-    }
-  }
-</style>

@@ -1,0 +1,12 @@
+---
+import Articles from '../../components/Articles.astro';
+import videos from '../../data/videos';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title='alefsdev | videos'
+  description='Descubre todos los videos que he grabado para youtube o extraidos de mis lives.'
+>
+  <Articles articles={videos} all />
+</Layout>

@@ -1,0 +1,12 @@
+---
+import Articles from '../../components/Articles.astro';
+import projects from '../../data/projects';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title='alefsdev | proyectos'
+  description='Descubre todos los projectos que he desarrollado en vivo o en videos de Youtube.'
+>
+  <Articles articles={projects} all />
+</Layout>
