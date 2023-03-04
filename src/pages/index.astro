@@ -1,112 +1,23 @@
 ---
 import Articles from '../components/Articles.astro';
+import projects from '../data/projects';
+import videos from '../data/videos';
 import Layout from '../layouts/Layout.astro';
-import type { IProjectArticle, IVideoArticle } from '../types/article';
-
-const projects: IProjectArticle[] = [
-  {
-    id: 1,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    href: '#',
-    image: 'https://picsum.photos/seed/1/300/200',
-    type: 'project',
-  },
-  {
-    id: 2,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    href: '#',
-    image: 'https://picsum.photos/seed/2/300/200',
-    type: 'project',
-  },
-  {
-    id: 3,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    href: '#',
-    image: 'https://picsum.photos/seed/3/300/200',
-    type: 'project',
-  },
-  {
-    id: 4,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    href: '#',
-    image: 'https://picsum.photos/seed/4/300/200',
-    type: 'project',
-  },
-];
-
-const videos: IVideoArticle[] = [
-  {
-    id: 1,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    href: '#',
-    image: 'https://picsum.photos/seed/1/300/200',
-    type: 'video',
-  },
-  {
-    id: 2,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    href: '#',
-    image: 'https://picsum.photos/seed/2/300/200',
-    type: 'video',
-  },
-  {
-    id: 3,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    href: '#',
-    image: 'https://picsum.photos/seed/3/300/200',
-    type: 'video',
-  },
-  {
-    id: 4,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    href: '#',
-    image: 'https://picsum.photos/seed/4/300/200',
-    type: 'video',
-  },
-  {
-    id: 5,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    href: '#',
-    image: 'https://picsum.photos/seed/5/300/200',
-    type: 'video',
-  },
-  {
-    id: 6,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    href: '#',
-    image: 'https://picsum.photos/seed/6/300/200',
-    type: 'video',
-  },
-  {
-    id: 7,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    href: '#',
-    image: 'https://picsum.photos/seed/6/300/200',
-    type: 'video',
-  },
-  {
-    id: 8,
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    href: '#',
-    image: 'https://picsum.photos/seed/6/300/200',
-    type: 'video',
-  },
-];
 ---
 
 <Layout title='alefs.dev | Home'>
-  <main class=''>
+  <>
     <Articles
       heading='Últimos Videos'
       max={8}
       href='/videos'
       articles={videos}
     />
-    <Articles
+    <!-- <Articles
       heading='Últimos Proyectos'
       max={4}
-      href='/proyectos'
+      href='/projects'
       articles={projects}
-    />
-  </main>
+    /> -->
+  </>
 </Layout>

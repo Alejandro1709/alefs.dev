@@ -8,8 +8,14 @@ export interface ArticlePageProps {
 const { article } = Astro.props;
 ---
 
-<article
-  class='h-[200px] bg-slate-400 hover:scale-95 transition-all cursor-pointer hover:shadow-md'
->
-  {article.type}
-</article>
+<a href={article.href}>
+  <article
+    class='h-[200px] bg-slate-400 hover:scale-95 transition-all cursor-pointer hover:shadow-md'
+  >
+    <img
+      class='w-full h-full object-cover'
+      src={article.image}
+      alt={`El proyecto ${article.title} fue creado durante un stream en vivo`}
+    />
+  </article>
+</a>
