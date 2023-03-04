@@ -1,0 +1,26 @@
+---
+import videos from '../../data/videos';
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: 'promesas-en-javascript' } },
+    { params: { slug: 'javascript-reduce' } },
+    {
+      params: {
+        slug: 'aprende-a-usar-correctamente-el-metodo-map-en-javascript',
+      },
+    },
+  ];
+}
+
+const { slug } = Astro.params;
+
+const video = videos.find((video) => video.slug === slug);
+
+if (!video) return Astro.redirect('/404');
+---
+
+<Layout title={`alefsdev | ${video.title}`} description={video.description}>
+  <h1>Helloooo {slug}</h1>
+</Layout>
