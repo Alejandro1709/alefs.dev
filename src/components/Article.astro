@@ -3,17 +3,18 @@ import type { ArticleType } from '../types/article';
 
 export interface ArticlePageProps {
   article: ArticleType;
+  target?: string;
 }
 
-const { article } = Astro.props;
+const { article, target } = Astro.props;
 ---
 
-<a href={article.href}>
+<a href={article.href} target={target} rel="noreferrer">
   <article
-    class='h-[200px] bg-slate-400 hover:scale-95 transition-all cursor-pointer hover:shadow-md'
+    class="h-[200px] bg-slate-400 hover:scale-95 transition-all cursor-pointer hover:shadow-md"
   >
     <img
-      class='w-full h-full object-cover'
+      class="w-full h-full object-cover"
       src={article.image}
       alt={`El proyecto ${article.title} fue creado durante un stream en vivo`}
     />
