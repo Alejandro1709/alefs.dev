@@ -5,19 +5,15 @@ import videos from '../data/videos';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title='alefs.dev | Home'>
+<Layout title="alefs.dev | Home">
   <>
+    <Articles heading="Últimos Videos" max={8} href="/videos" articles={videos} />
     <Articles
-      heading='Últimos Videos'
-      max={8}
-      href='/videos'
-      articles={videos}
-    />
-    <!-- <Articles
-      heading='Últimos Proyectos'
+      heading="Últimos Proyectos"
       max={4}
-      href='/projects'
+      href="/projects"
+      target="_blank"
       articles={projects}
-    /> -->
+    />
   </>
 </Layout>
