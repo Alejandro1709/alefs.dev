@@ -7,8 +7,8 @@ const projects: IProjectArticle[] = [
     slug: 'next-trivia',
     description:
       'Un pequeño y divertido juego de trivia sugerido por ChatGPT que utiliza NextJS, TailwindCSS y la API de OpenTriviaDB.',
-    href: '/projects/next-trivia',
-    image: 'https://picsum.photos/seed/1/300/200',
+    href: 'https://nextrivia.alefs.dev/',
+    image: '/projj.png',
     type: 'project',
   },
 ];
