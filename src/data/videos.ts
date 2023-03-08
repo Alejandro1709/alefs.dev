@@ -25,6 +25,15 @@ const videos: IVideoArticle[] = [
     image: '/mapp.png',
     type: 'video',
   },
+  {
+    id: 4,
+    title:
+      'Te enseño a crear una app con ReactJS y Rick y Morty Ep 1. Inicializando el proyecto y markup base',
+    slug: 'te-ensenio-a-crear-una-app-con-reactjs-y-rick-y-morty-ep1-inicializando-el-proyecto-y-markup-base',
+    href: '/videos/te-ensenio-a-crear-una-app-con-reactjs-y-rick-y-morty-ep1-inicializando-el-proyecto-y-markup-base',
+    image: '/live-thumbnail.png',
+    type: 'video',
+  },
 ];
 
 export default videos;
