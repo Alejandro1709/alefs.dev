@@ -21,7 +21,7 @@ const {
   articles,
 } = Astro.props;
 
-const sliced = articles.slice(0, max).sort((a: IArticle, b: IArticle) => a.id - b.id);
+const sliced = articles.slice(0, max);
 ---
 
 <section class="pt-8 md:pt-8 mx-4 md:mx-0">
