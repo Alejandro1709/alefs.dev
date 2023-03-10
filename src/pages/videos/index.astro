@@ -5,8 +5,11 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout
-  title='alefsdev | videos'
-  description='Descubre todos los videos que he grabado para youtube o extraidos de mis lives.'
+  title="alefsdev | videos"
+  description="Descubre todos los videos que he grabado para youtube o extraidos de mis lives."
 >
+  <div class="pt-6">
+    <a class="text-blue-500 underline" href="/">Volver</a>
+  </div>
   <Articles articles={videos} all />
 </Layout>

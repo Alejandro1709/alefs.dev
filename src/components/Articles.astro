@@ -1,4 +1,5 @@
 ---
+import type IArticle from '../types/article';
 import type { ArticleType } from '../types/article';
 import Article from './Article.astro';
 
@@ -11,13 +12,22 @@ export interface ArticlesProps {
   articles: ArticleType[];
 }
 
-const { heading = 'Section', target = '_self', href = '/', all, articles } = Astro.props;
+const {
+  heading = 'Section',
+  target = '_self',
+  max,
+  href = '/',
+  all,
+  articles,
+} = Astro.props;
+
+const sliced = articles.slice(0, max).sort((a: IArticle, b: IArticle) => a.id - b.id);
 ---
 
-<section class="pt-8 md:pt-12 mx-4 md:mx-0">
+<section class="pt-8 md:pt-8 mx-4 md:mx-0">
   {
     all ? null : (
-      <div class="flex items-baseline gap-4 mb-4">
+      <div class="flex items-baseline gap-4 my-4">
         <h2 class="text-3xl font-semibold">{heading}</h2>
         <a
           class="hover:underline hover:scale-95 transition-all text-blue-400 font-semibold"
@@ -29,10 +39,6 @@ const { heading = 'Section', target = '_self', href = '/', all, articles } = Ast
     )
   }
   <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
-    {
-      articles.map((article: ArticleType) => (
-        <Article article={article} target={target} />
-      ))
-    }
+    {sliced.map((article: ArticleType) => <Article article={article} target={target} />)}
   </div>
 </section>
