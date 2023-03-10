@@ -39,6 +39,14 @@ const sliced = articles.slice(0, max);
     )
   }
   <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
-    {sliced.map((article: ArticleType) => <Article article={article} target={target} />)}
+    {
+      max || all
+        ? sliced.map((article: ArticleType) => (
+            <Article article={article} target={target} />
+          ))
+        : articles.map((article: ArticleType) => (
+            <Article article={article} target={target} />
+          ))
+    }
   </div>
 </section>
