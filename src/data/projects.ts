@@ -21,6 +21,16 @@ const projects: IProjectArticle[] = [
     image: '/live-thumbnail.png',
     type: 'project',
   },
+  {
+    id: 3,
+    title: 'Calendtion',
+    slug: 'calendtion',
+    description:
+      'Una app hecha con NextJS, Tailwind, Prisma y NextAuth para publicar tus horarios',
+    href: 'https://calendar-reactor-2yibr23ub-alejandro1709.vercel.app/',
+    image: '/calendtion.png',
+    type: 'project',
+  },
 ];
 
 export default projects;

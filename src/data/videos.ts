@@ -46,10 +46,19 @@ const videos: IVideoArticle[] = [
   {
     id: 6,
     title:
-      'Te enseño a crear una app con ReactJS y Rick y Morty Ep 2. Filtrando personajes y mostrando detalles',
+      'Te enseño a crear una app con ReactJS y Rick y Morty Ep 3. Filtrando personajes y mostrando detalles',
     slug: 'te-ensenio-a-crear-una-app-con-reactjs-y-rick-y-morty-ep3-filtrando-personajes-y-mostrando-detalles',
     href: '/videos/te-ensenio-a-crear-una-app-con-reactjs-y-rick-y-morty-ep3-filtrando-personajes-y-mostrando-detalles',
     image: '/live-thumbnail-3.png',
+    type: 'video',
+  },
+  {
+    id: 7,
+    title:
+      'Te enseño a crear una app con ReactJS y Rick y Morty Ep 4. Estado global con Context API',
+    slug: 'te-ensenio-a-crear-una-app-con-reactjs-y-rick-y-morty-ep4-estado-global-con-context-api',
+    href: '/videos/te-ensenio-a-crear-una-app-con-reactjs-y-rick-y-morty-ep4-estado-global-con-context-api',
+    image: '/live-thumbnail-4.png',
     type: 'video',
   },
 ];
