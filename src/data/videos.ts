@@ -61,6 +61,15 @@ const videos: IVideoArticle[] = [
     image: '/live-thumbnail-4.png',
     type: 'video',
   },
+  {
+    id: 8,
+    title:
+      'Te enseño a crear una app con ReactJS y Rick y Morty Ep 5. Añadiendo useReducer y deploy de la web',
+    slug: 'te-ensenio-a-crear-una-app-con-reactjs-y-rick-y-morty-ep5-anadiendo-usereducer-y-deploy-de-la-web',
+    href: '/videos/te-ensenio-a-crear-una-app-con-reactjs-y-rick-y-morty-ep5-anadiendo-usereducer-y-deploy-de-la-web',
+    image: '/live-thumbnail-5.png',
+    type: 'video',
+  },
 ];
 
 export default videos;

@@ -17,7 +17,7 @@ const projects: IProjectArticle[] = [
     slug: 'react-rick-and-morty-api',
     description:
       'Una app hecha con ReactJS, Tailwind y el API de la famosa serie de tv Rick and Morty.',
-    href: '/',
+    href: 'https://rickandmorty-two-bice.vercel.app/',
     image: '/live-thumbnail.png',
     type: 'project',
   },
